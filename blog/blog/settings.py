@@ -75,9 +75,16 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'mssql',
+        'HOST': r'LAPTOP-942HU0BS\SQL',
+        'PORT': '1433',
+        'USER': 'itheima',
+        'PASSWORD': '123456',
+        'NAME': 'blog',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+        },
+    },
 }
 
 
